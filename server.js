@@ -20,10 +20,11 @@ app.use((req, res, next) => {
     next();
 
 });
+hbs.registerHelper();
 
 app.get('/', (req, res) => {
     // res.send('<h1>Hello Express!</h1>');
-    res.send({
+    res.render('home.hbs', {
         name: 'Sumedha',
         like: [
             'biking', 'gaming'
